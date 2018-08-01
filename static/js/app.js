@@ -31,17 +31,18 @@ submit.on("click", function() {
     var inputCity = d3.select("#city").property("value");
     var inputState = d3.select("#state").property("value");
     var inputCountry = d3.select("#country").property("value");
-    var inputShape = d3.select("#shape").property("value")
-    var inputDuration = d3.select("duration").property("value")
-    var inputComments = d3.select("comments").property("value")
+    var inputShape = d3.select("#shape").property("value");
+    var inputDuration = d3.select("duration").property("value");
+    var inputComments = d3.select("comments").property("value");
 
-    console.log(inputValue);
+    // console.log(inputValue);
 
     function filterUFO(sighting) {
         if (inputDate != "") {
-            return sighting.datetime===inputDate 
-            // && sighting.city===inputCity && sighting.state ===inputState && sighting.country===sightingCountry
-            // && sighting.shape===inputShape && sightingDuration===inputDuration && sightingcomments===inputComments                
+            return sighting.datetime === inputDate 
+            && sighting.city===inputCity 
+            && sighting.state ===inputState && sighting.country===sightingCountry
+            && sighting.shape===inputShape && sightingDuration===inputDuration && sightingcomments===inputComments                
         }
     }
     
